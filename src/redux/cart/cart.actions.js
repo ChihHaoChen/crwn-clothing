@@ -5,3 +5,8 @@ export const toggleCartHidden = () => ({
   // Since we directly toggle the state in cart.reducer.js, so no need to pass the payload.
 });
 
+export const addItem = item => ({
+  type: CartActionTypes.ADD_ITEM,
+  payload: item
+})
+
