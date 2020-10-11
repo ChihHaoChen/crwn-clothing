@@ -4,7 +4,11 @@ import { persistStore } from 'redux-persist'
 
 import rootReducer from './root-reducer';
 
-const middlewares = [logger];
+const middlewares = [];
+
+if (process.env.NODE_ENV === 'development') {
+  middlewares.push(logger);
+}
 
 // middelwares are the array of aruguments for the function of applyMiddleware
 // if we have more middleware in the future, 
